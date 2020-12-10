@@ -1,0 +1,6 @@
+obj
+bin
+templates/*/obj
+*.nupkg
+.vscode
+*.vscode
