@@ -4,6 +4,7 @@ This repository is for Guilded.NET .NET Core(and .NET 5) templates. This allows 
 
 > ## Available
 > - `guildednetpinguser` - `dotnet new guildednetpinguser`
+> - `guildednetcommand` - `dotnet new guildednetcommand`
 
 > ## How to install
 > 1. Open up your terminal
