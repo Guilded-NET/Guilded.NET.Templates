@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <PackageType>Template</PackageType>
+    <PackageVersion>0.0.10</PackageVersion>
+    <PackageId>Guilded.NET.Templates</PackageId>
+    <Title>Guilded.NET Templates</Title>
+    <Authors>IdkGoodName</Authors>
+    <Description>.NET Core and .NET 5 templates</Description>
+    <PackageTags>guilded-dotnet;dotnet-new;template;templates;guilded</PackageTags>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+</Project>

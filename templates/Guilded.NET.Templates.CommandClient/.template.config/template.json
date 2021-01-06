@@ -1,0 +1,13 @@
+{
+    "author": "IdkGoodName",
+    "classifications": ["guilded.net", "client"],
+    "identity": "Guilded.Templates.CommandClient",
+    "name": "Guilded.NET Client with commands",
+    "shortName": "guilded.net.command",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "ProjectName",
+    "preferNameDirectory": true
+}

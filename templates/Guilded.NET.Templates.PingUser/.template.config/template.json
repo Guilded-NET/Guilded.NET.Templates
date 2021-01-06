@@ -1,0 +1,13 @@
+{
+    "author": "IdkGoodName",
+    "classifications": ["guilded.net", "client"],
+    "identity": "Guilded.Templates.PingUser",
+    "name": "Guilded.NET Ping user bot",
+    "shortName": "guilded.net.pinguser",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "ProjectName",
+    "preferNameDirectory": true
+}
