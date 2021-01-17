@@ -22,18 +22,8 @@ namespace ProjectName {
                    prefix = config["prefix"].Value<string>();
             // Tells us that it's starting with specific prefix
             Console.WriteLine($"Starting the bot with prefix '{prefix}'");
-            // Creates config for the client
-            GuildedClientConfig clientConfig = new GuildedClientConfig(
-                // Creates a command which always returns the given prefix
-                // Literally `=> prefix`
-                // Change this if you want:
-                // server-specific prefixes, group-specific prefixes or any other way to get a prefix from it
-                GuildedClientConfig.BasicPrefix(prefix),
-                // TODO: Change null to GId.Parse("yourId")
-                null
-            );
             // Creates new client
-            using GuildedUserClient client = new GuildedUserClient(email, password, clientConfig);
+            using GuildedUserClient client = new GuildedUserClient(email, password, new GuildedClientConfig(GuildedClientConfig.BasicPrefix(prefix)));
             // Fetches all commands from specific type
             client.FetchCommands(
                 typeof(CommandList)
@@ -41,7 +31,7 @@ namespace ProjectName {
             // If client emits any errors
             client.Error += (o, e) => Console.WriteLine($"Error [{e.Code}]: {e.ErrorMessage}");
             // When client is ready
-            client.Connected += (o, e) => Console.WriteLine($"I successfully logged in!\n - ID: {client.CurrentUser.Id}\n - Name: {client.CurrentUser.Username}");
+            client.Connected += (o, e) => Console.WriteLine($"I successfully logged in!\n - ID: {client.Me.Id}\n - Name: {client.Me.Username}");
             // Start the bot
             StartAsync(client).GetAwaiter().GetResult();
         }

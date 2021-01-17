@@ -19,9 +19,9 @@ namespace ProjectName {
         /// <param name="command">Name of the command used</param>
         /// <param name="arguments">Command arguments</param>
         [Command("ping", "pong", Description = "Responds with `Pong!`")]
-        public static async void Ping(IGuildedClient client, MessageCreatedEvent messageCreated, string command, IList<string> arguments) {
+        public static async void Ping(BasicGuildedClient client, MessageCreatedEvent messageCreated, string command, IList<string> arguments) {
             // Sends a message to channel where `ping`/`pong` command was used
-            await client.SendMessageAsync(messageCreated.ChannelId,
+            await messageCreated.RespondAsync(
                 // Generates a new message with content `Pong!`
                 Message.Generate("Pong!")
             );
@@ -34,10 +34,9 @@ namespace ProjectName {
         /// <param name="command">Name of the command used</param>
         /// <param name="arguments">Command arguments</param>
         [Command("help", "commands", "commandlist", "command-list", Description = "Shows a list of commands.", Usage = "<command name>")]
-        public static async void Help(IGuildedClient client, MessageCreatedEvent messageCreated, string command, IList<string> arguments) {
-            BasicGuildedClient basic = (BasicGuildedClient)client;
+        public static async void Help(BasicGuildedClient client, MessageCreatedEvent messageCreated, string command, IList<string> arguments) {
             // Gets all commands in the client
-            var keys = basic.CommandDictionary.Keys;
+            var keys = client.CommandDictionary.Keys;
             // If there are 0 arguments, then give all commands
             if(arguments.Count == 0) {
                 // Turn commands to string

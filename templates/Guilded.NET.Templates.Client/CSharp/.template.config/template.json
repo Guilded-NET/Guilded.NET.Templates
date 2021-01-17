@@ -1,9 +1,9 @@
 {
     "author": "IdkGoodName",
     "classifications": ["guilded.net", "client"],
-    "identity": "Guilded.Templates.CommandClient",
-    "name": "Guilded.NET Client with commands",
-    "shortName": "guilded.net.command",
+    "identity": "Guilded.Templates.Client",
+    "name": "Guilded.NET Client",
+    "shortName": "guilded.net.client",
     "tags": {
         "language": "C#",
         "type": "project"
