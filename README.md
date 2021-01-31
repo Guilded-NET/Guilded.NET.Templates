@@ -3,8 +3,8 @@
 This repository is for Guilded.NET .NET Core(and .NET 5) templates. This allows you to instantly create a bot with `dotnet new` command.
 
 > ## Available
-> - `guilded.net.pinguser` - `dotnet new guildednetpinguser`
-> - `guilded.net.command` - `dotnet new guildednetcommand`
+> - `guilded.net.pinguser` - `dotnet new guilded.net.pinguser`
+> - `guilded.net.command` - `dotnet new guilded.net.command`
 
 > ## How to install
 > 1. Open up your terminal
