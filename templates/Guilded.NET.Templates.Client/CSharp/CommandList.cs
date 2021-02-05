@@ -1,6 +1,4 @@
 using Guilded.NET;
-using Guilded.NET.Util;
-using Guilded.NET.Objects;
 using Guilded.NET.Objects.Events;
 using Guilded.NET.Objects.Chat;
 using System.Collections.Generic;
@@ -42,7 +40,7 @@ namespace ProjectName {
                 // Turn commands to string
                 IEnumerable<string> com = keys.Select(x => $"**{x.Name}**: {x.Description}");
                 // Generate embed for the command list
-                Embed embed = new Embed();
+                Embed embed = new();
                 embed.SetTitle("Command list");
                 embed.SetDescription(string.Join("\n", com));
                 embed.AddField("For more info", "Type `help command_name` to get more info about a command.");
@@ -60,7 +58,7 @@ namespace ProjectName {
                     return;
                 }
                 // If it was, then generate embed for it
-                Embed embed = new Embed();
+                Embed embed = new();
                 embed.SetTitle(com.Name);
                 embed.SetDescription(com.Description);
                 embed.AddField("Aliases", string.Join(", ", com.Alias), true);

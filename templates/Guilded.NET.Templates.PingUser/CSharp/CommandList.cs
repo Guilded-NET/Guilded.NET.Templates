@@ -1,5 +1,4 @@
 using Guilded.NET;
-using Guilded.NET.Objects;
 using Guilded.NET.Objects.Events;
 using Guilded.NET.Objects.Chat;
 using System.Collections.Generic;
