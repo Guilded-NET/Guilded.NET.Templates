@@ -40,10 +40,10 @@ namespace ProjectName {
                 // Turn commands to string
                 IEnumerable<string> com = keys.Select(x => $"**{x.Name}**: {x.Description}");
                 // Generate embed for the command list
-                Embed embed = new();
-                embed.SetTitle("Command list");
-                embed.SetDescription(string.Join("\n", com));
-                embed.AddField("For more info", "Type `help command_name` to get more info about a command.");
+                Embed embed = new Embed().
+                    SetTitle("Command list").
+                    SetDescription(string.Join("\n", com)).
+                    AddField("For more info", "Type `help command_name` to get more info about a command.");
                 // Output the embed
                 await messageCreated.RespondAsync(Message.Generate(embed));
             // If argument was given
@@ -58,11 +58,11 @@ namespace ProjectName {
                     return;
                 }
                 // If it was, then generate embed for it
-                Embed embed = new();
-                embed.SetTitle(com.Name);
-                embed.SetDescription(com.Description);
-                embed.AddField("Aliases", string.Join(", ", com.Alias), true);
-                embed.AddField("Usage", $"{com.Name} {com.Usage}");
+                Embed embed = new Embed().
+                    SetTitle(com.Name).
+                    SetDescription(com.Description).
+                    AddField("Aliases", string.Join(", ", com.Alias), true).
+                    AddField("Usage", $"{com.Name} {com.Usage}");
                 // Output the embed
                 await messageCreated.RespondAsync(Message.Generate(embed));
             }
