@@ -2,8 +2,13 @@
 
 This repository is for Guilded.NET .NET Core(and .NET 5) templates. This allows you to instantly create a bot with `dotnet new` command.
 
+> ## Languages
+> - C#
+> - F#
+> - C#-NC - C# template without comments
+
 > ## Available
-> - `guilded.net.pinguser` - `dotnet new guilded.net.pinguser`
+> - `guilded.net.basicuser` - `dotnet new guilded.net.basicuser`
 > - `guilded.net.command` - `dotnet new guilded.net.command`
 
 > ## How to install
@@ -16,4 +21,4 @@ This repository is for Guilded.NET .NET Core(and .NET 5) templates. This allows 
 > Now you should be able to see new templates in `dotnet new`
 
 > ## Developers & Contributors
-> `IdkGoodName` - Guilded.NET.Templates.PingUser
+> `IdkGoodName`
