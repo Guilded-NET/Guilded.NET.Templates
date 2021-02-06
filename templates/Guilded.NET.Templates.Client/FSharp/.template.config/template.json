@@ -1,12 +1,12 @@
 {
     "author": "IdkGoodName",
     "classifications": ["guilded.net", "client"],
-    "identity": "Guilded.Templates.Client.CSharp",
+    "identity": "Guilded.Templates.Client.FSharp",
     "groupIdentity": "Guilded.Templates.Client",
     "name": "Guilded.NET Client",
     "shortName": "guilded.net.client",
     "tags": {
-        "language": "C#",
+        "language": "F#",
         "type": "project"
     },
     "sourceName": "ProjectName",

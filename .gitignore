@@ -2,6 +2,8 @@ obj
 bin
 templates/*/obj
 templates/*/bin
+templates/*/.ionide
 *.nupkg
 .vscode
 *.vscode
+.ionide
