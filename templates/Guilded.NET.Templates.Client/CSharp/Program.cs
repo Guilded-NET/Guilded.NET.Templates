@@ -1,19 +1,24 @@
 ﻿using System;
-using Newtonsoft.Json.Linq;
-using Guilded.NET;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace ProjectName {
+using Guilded.NET;
+
+using Newtonsoft.Json.Linq;
+
+namespace ProjectName
+{
     /// <summary>
     /// User bot client program.
     /// </summary>
-    public class Program {
+    public class Program
+    {
         /// <summary>
         /// Creates a new user bot client.
         /// </summary>
         /// <param name="args">Program arguments</param>
-        static void Main(string[] args) {
+        static void Main()
+        {
             // Read JSON "config/config.json"
             JObject config = JObject.Parse(File.ReadAllText("./config/config.json"));
             // Get login info
@@ -50,7 +55,8 @@ namespace ProjectName {
         /// </summary>
         /// <param name="client">Client to connect</param>
         /// <returns>Async task</returns>
-        static async Task StartAsync(GuildedUserClient client) {
+        static async Task StartAsync(GuildedUserClient client)
+        {
             // Connects to Guilded
             await client.ConnectAsync();
             // Makes it stop forever, so the bot wouldn't instantly shutdown after connecting

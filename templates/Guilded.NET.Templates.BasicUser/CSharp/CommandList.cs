@@ -1,7 +1,8 @@
-using Guilded.NET;
-using Guilded.NET.Objects.Events;
-using Guilded.NET.Objects.Chat;
 using System.Collections.Generic;
+
+using Guilded.NET;
+using Guilded.NET.Objects.Chat;
+using Guilded.NET.Objects.Events;
 
 namespace ProjectName {
     /// <summary>
