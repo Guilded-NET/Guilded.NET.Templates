@@ -9,3 +9,4 @@ templates/*/.ionide
 *.logs
 .fake
 .ionide
+*.logs
