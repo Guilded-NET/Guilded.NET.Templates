@@ -11,7 +11,12 @@ This repository is for Guilded.NET .NET Core(and .NET 5) templates. This allows 
 > - `guilded.net.basicuser` - `dotnet new guilded.net.basicuser`
 > - `guilded.net.command` - `dotnet new guilded.net.command`
 
-> ## How to install
+> ## How to install from NuGet
+> 1. Open up your terminal
+> 2. Type `dotnet new -i Guilded.NET.Templates
+> Now you should be able to see new templates in `dotnet new`
+
+> ## How to install manually
 > 1. Open up your terminal
 > 2. Create new folder where you know you won't touch(E.g., create new directory called `templates/Guilded.NET.Templates` in `dotnet` directory)
 > 3. Go to that folder(`templates/Guilded.NET.Templates` directory) in your terminal

@@ -7,3 +7,5 @@ templates/*/.ionide
 *.vscode
 *.ionide
 *.logs
+.fake
+.ionide
