@@ -2,8 +2,10 @@ namespace ProjectName
 
 open System.IO
 open System.Threading.Tasks
-open Newtonsoft.Json.Linq
+
 open Guilded.NET
+
+open Newtonsoft.Json.Linq
 /// <summary>
 /// User bot client program.
 /// </summary>
@@ -12,19 +14,17 @@ module Program =
     /// Makes bot connect to Guilded and then stops it from shutting down.
     /// </summary>
     /// <param name="client">Client to connect</param>
-    let StartAsync (client: GuildedUserClient) =
-        async {
-            // Connects to Guilded
-            client.ConnectAsync() |> Async.AwaitTask |> ignore
-            // Makes it stop forever
-            -1 |> Task.Delay |> Async.AwaitTask |> ignore
-        }
+    let startAsync (client: GuildedUserClient) =
+        // Connects to Guilded
+        client.ConnectAsync() |> Async.AwaitTask |> Async.Ignore |> ignore
+        // Makes it stop forever
+        -1 |> Task.Delay |> Async.AwaitTask |> Async.Ignore
     /// <summary>
     /// Creates a new user bot client.
     /// </summary>
-    /// <param name="argv">Program arguments</param>
+    /// <param name="_">Program arguments</param>
     [<EntryPoint>]
-    let main argv =
+    let main _ =
         // Read JSON "config/config.json"
         let config =
             JObject.Parse(File.ReadAllText "./config/config.json")
@@ -55,6 +55,6 @@ module Program =
         client.Prepared.Add
             (fun arg -> printfn "I successfully logged in!\n - ID: %O\n - Name: %s" client.Me.Id client.Me.Username)
         // Start the bot
-        client |> StartAsync |> Async.RunSynchronously
+        client |> startAsync |> Async.RunSynchronously
         // End
         0

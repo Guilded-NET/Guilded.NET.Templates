@@ -1,9 +1,10 @@
 namespace ProjectName
 
+open System.Collections.Generic
+
 open Guilded.NET
 open Guilded.NET.Objects.Chat
 open Guilded.NET.Objects.Events
-open System.Collections.Generic
 /// <summary>
 /// List of user bot commands.
 /// </summary>
@@ -28,3 +29,4 @@ type public CommandList =
         |> Message.Generate
         |> messageCreated.RespondAsync
         |> Async.AwaitTask
+        |> ignore

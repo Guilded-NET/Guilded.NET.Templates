@@ -4,7 +4,6 @@ templates/*/obj
 templates/*/bin
 templates/*/.ionide
 *.nupkg
-.vscode
 *.vscode
-.ionide
+*.ionide
 *.logs
