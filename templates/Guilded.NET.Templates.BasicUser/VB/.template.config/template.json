@@ -1,0 +1,14 @@
+{
+    "author": "IdkGoodName",
+    "classifications": ["guilded.net", "client"],
+    "identity": "Guilded.Templates.BasicUser.VB",
+    "groupIdentity": "Guilded.Templates.BasicUser",
+    "name": "Guilded.NET Basic userbot",
+    "shortName": "guilded.net.basicuser",
+    "tags": {
+        "language": "VB",
+        "type": "project"
+    },
+    "sourceName": "ProjectName",
+    "preferNameDirectory": true
+}

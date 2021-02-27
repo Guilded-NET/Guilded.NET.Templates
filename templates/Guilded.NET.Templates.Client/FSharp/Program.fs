@@ -37,7 +37,7 @@ module Program =
         // Creates config for the client
         let clientConfig =
             GuildedClientConfig(
-                // Creates a command which always returns the given prefix
+                // Always returns the given prefix
                 // Literally `=> prefix`
                 // Change this if you want:
                 // server-specific prefixes, group-specific prefixes or any other way to get a prefix from it

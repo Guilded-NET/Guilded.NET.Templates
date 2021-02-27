@@ -29,7 +29,7 @@ namespace ProjectName
             Console.WriteLine($"Starting the bot with prefix '{prefix}'");
             // Creates config for the client
             GuildedClientConfig clientConfig = new(
-                // Creates a command which always returns the given prefix
+                // Ahich always returns the given prefix
                 // Literally `=> prefix`
                 // Change this if you want:
                 // server-specific prefixes, group-specific prefixes or any other way to get a prefix from it
