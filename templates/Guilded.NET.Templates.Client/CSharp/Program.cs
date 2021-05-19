@@ -6,6 +6,9 @@ using Guilded.NET;
 
 using Newtonsoft.Json.Linq;
 
+using Serilog;
+using Serilog.Core;
+
 namespace ProjectName
 {
     /// <summary>
@@ -13,6 +16,13 @@ namespace ProjectName
     /// </summary>
     public class Program
     {
+        /// <summary>
+        /// Logger for this bot.
+        /// </summary>
+        internal static readonly Logger logger = new LoggerConfiguration()
+            .MinimumLevel.Verbose()
+            .WriteTo.Console()
+            .CreateLogger();
         /// <summary>
         /// Creates a new user bot client.
         /// </summary>
@@ -26,10 +36,10 @@ namespace ProjectName
                    password = config["password"].Value<string>(),
                    prefix = config["prefix"].Value<string>();
             // Tells us that it's starting with specific prefix
-            Console.WriteLine($"Starting the bot with prefix '{prefix}'");
+            logger.Verbose("Starting the bot with prefix '{prefix}'", prefix);
             // Creates config for the client
             GuildedClientConfig clientConfig = new(
-                // Ahich always returns the given prefix
+                // That always returns given prefix
                 // Literally `=> prefix`
                 // Change this if you want:
                 // server-specific prefixes, group-specific prefixes or any other way to get a prefix from it
@@ -38,15 +48,19 @@ namespace ProjectName
                 null
             );
             // Creates new client
-            using GuildedUserClient client = new(email, password, clientConfig);
+            using GuildedUserClient client = new(email, password, new GuildedClientConfig(prefix));
             // Fetches all commands from specific type
             client.FetchCommands(
                 typeof(CommandList)
             );
             // When client connects to Guilded
-            client.Connected += (o, e) => Console.WriteLine("Connected");
+            client.Connected += (o, e) => logger.Debug("Connected");
             // When client is ready
-            client.Prepared += (o, e) => Console.WriteLine($"I successfully logged in!\n - ID: {client.Me.Id}\n - Name: {client.Me.Username}");
+            client.Prepared += (o, e) => logger.Information(
+                "I successfully logged in! - ID: {Id}\n - Name: {Username}\n - Server count: {Teams}",
+                client.Me.Id,
+                client.Me.Username,
+                client.Me.TeamCount);
             // Start the bot
             StartAsync(client).GetAwaiter().GetResult();
         }
