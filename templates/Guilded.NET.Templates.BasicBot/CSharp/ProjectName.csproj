@@ -2,12 +2,11 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ProjectName</RootNamespace>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Guilded.NET" Version="0.1.1" />
+    <PackageReference Include="Guilded.NET" Version="0.3.0" />
   </ItemGroup>
 
   <ItemGroup>
