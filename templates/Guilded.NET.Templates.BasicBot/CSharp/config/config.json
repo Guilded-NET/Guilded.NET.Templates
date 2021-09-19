@@ -1,4 +1,4 @@
 {
-    "token": "secret",
+    "auth": "secret",
     "prefix": "!"
 }

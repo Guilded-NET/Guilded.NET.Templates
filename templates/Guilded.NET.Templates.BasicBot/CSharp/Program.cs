@@ -8,37 +8,30 @@ using Newtonsoft.Json.Linq;
 
 namespace ProjectName
 {
-    public class Program
+    public static class Program
     {
-        /// <summary>
-        /// Creates a new user bot client.
-        /// </summary>
-        /// <param name="args">Program arguments</param>
-        static void Main()
+        private static void Main()
         {
-            // Gets all of the configuration from the file
+            // To get auth and prefix properties from config file
             JObject config = JObject.Parse(File.ReadAllText("./config/config.json"));
-            string token = config["token"].Value<string>(),
+
+            string auth = config["auth"].Value<string>(),
                    prefix = config["prefix"].Value<string>();
+
             // Creates new client
-            using GuildedBotClient client = new(token);
-            // When the client connects to Guilded, output "Connected"
+            using GuildedBotClient client = new(auth);
+
             client.Connected += (o, e) => Console.WriteLine("Connected");
-            // When the client is ready, output "I successfully logged in!"
-            client.Prepared += (o, e) => Console.WriteLine($"I successfully logged in!");
-            // Start the bot
-            RunAsync(client).GetAwaiter().GetResult();
+            client.Prepared += (o, e) => Console.WriteLine("I successfully logged in!");
+
+            RunAsync(client).ConfigureAwait(false).GetAwaiter().GetResult();
         }
-        /// <summary>
-        /// Keeps the connection of the Guilded client.
-        /// </summary>
-        /// <param name="client">Client to keep running</param>
-        static async Task RunAsync(GuildedBotClient client)
+        private static async Task RunAsync(GuildedBotClient client)
         {
-            // Connects to Guilded
-            await client.ConnectAsync();
-            // Makes it stop forever, so the bot wouldn't instantly shutdown after connecting
-            await Task.Delay(-1);
+            await client.ConnectAsync().ConfigureAwait(false);
+
+            // Don't close the program when the bot connects
+            await Task.Delay(-1).ConfigureAwait(false);
         }
     }
 }
