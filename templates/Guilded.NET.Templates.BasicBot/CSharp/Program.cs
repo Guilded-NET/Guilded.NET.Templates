@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reactive.Linq;
 using System.Threading.Tasks;
 
 using Guilded.NET;
@@ -23,6 +24,12 @@ namespace ProjectName
 
             client.Connected += (o, e) => Console.WriteLine("Connected");
             client.Prepared += (o, e) => Console.WriteLine("I successfully logged in!");
+
+            client.MessageCreated
+                // NOTE: You can set your own condition that checks if starts with prefix
+                // NOTE: The condition won't remove the prefix. You'll need to manually do that
+                .Where(msgCreated => msgCreated.Content == prefix + "ping")
+                .Subscribe(msgCreated => msgCreated.ReplyAsync("Pong!"));
 
             RunAsync(client).ConfigureAwait(false).GetAwaiter().GetResult();
         }
