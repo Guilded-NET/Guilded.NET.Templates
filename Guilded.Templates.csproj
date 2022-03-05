@@ -2,17 +2,17 @@
 
   <PropertyGroup>
     <!-- Package -->
-    <PackageId>Guilded.NET.Templates</PackageId>
+    <PackageId>Guilded.Templates</PackageId>
     <PackageType>Template</PackageType>
-    <PackageVersion>0.4.0</PackageVersion>
+    <PackageVersion>0.6.0</PackageVersion>
     <PackageTags>guilded-dotnet;dotnet-new;template;templates;guilded</PackageTags>
     <PackageProjectUrl>https://guilded-net.github.io/index</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <!-- Template pack info -->
     <Title>Guilded.NET Templates</Title>
     <Authors>IdkGoodName</Authors>
-    <Description>.NET Core and .NET 5+ templates for Guilded.NET</Description>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <Description>.NET Core and .NET 6+ templates for Guilded.NET</Description>
+    <TargetFramework>net6.0</TargetFramework>
     <RepositoryUrl>https://github.com/Guilded-NET/Guilded.NET</RepositoryUrl>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <!-- Content -->

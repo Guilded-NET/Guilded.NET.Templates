@@ -1,0 +1,14 @@
+{
+    "author": "IdkGoodName",
+    "classifications": ["guilded", "client"],
+    "identity": "Guilded.Templates.Bot.CSharp",
+    "groupIdentity": "Guilded.Templates.Bot",
+    "name": "Guilded.NET Basic Bot",
+    "shortName": "guilded.bot",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "ProjectName",
+    "preferNameDirectory": true
+}
