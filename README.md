@@ -1,29 +1,33 @@
-# Guilded.NET.Templates
+# Guilded.NET Templates
 
-This repository is for Guilded.NET .NET Core(and .NET 5) templates. This allows you to instantly create a bot with `dotnet new` command.
+[![Version](https://img.shields.io/badge/Version-0.6.0-red?style=for-the-badge)](https://github.com/IdkGoodName/Guilded.NET) [![Version](https://img.shields.io/badge/Version-Beta-orange?style=for-the-badge)](https://github.com/Guilded-NET/Guilded.NET)
 
-> ## Languages
-> - C#
-> - F#
-> - C#-NC - C# template without comments
+.NET templates for creating [Guilded.NET](https://github.com/Guilded-NET/Guilded.NET) bots. Easily create bots with one command.
 
-> ## Available
-> - `guilded.net.basicuser` - `dotnet new guilded.net.basicuser`
-> - `guilded.net.command` - `dotnet new guilded.net.command`
+## Available Languages
+- C#
 
-> ## How to install from NuGet
-> 1. Open up your terminal
-> 2. Type `dotnet new -i Guilded.NET.Templates
-> Now you should be able to see new templates in `dotnet new`
+## Available Templates
+- `guilded.bot` - `dotnet new guilded.bot`
 
-> ## How to install manually
-> 1. Open up your terminal
-> 2. Create new folder where you know you won't touch(E.g., create new directory called `templates/Guilded.NET.Templates` in `dotnet` directory)
-> 3. Go to that folder(`templates/Guilded.NET.Templates` directory) in your terminal
-> 4. Type `git clone https://github.com/IdkGoodName/Guilded.NET.Templates.git .`
-> 5. Go to `templates/Guilded.NET.Templates` directory in your terminal
-> 6. Type `dotnet new -i .`
-> Now you should be able to see new templates in `dotnet new`
+## Installing
 
-> ## Developers & Contributors
-> `IdkGoodName`
+Guilded.NET templates are available via NuGet and can be installed from command line:
+
+```bash
+dotnet new -i Guilded.Templates
+```
+
+## Other information
+
+### Links
+- [Website](https://guilded-net.github.io/)
+- [NuGet](https://www.nuget.org/packages/Guilded.Templates/)
+- [FuGet](https://www.fuget.org/packages/Guilded.Templates/)
+
+### Maintainers
+- **[IdkGoodName](https://guilded.gg/profile/R40Mp0Wd)** - leading maintainer
+
+## See also
+- **[Guilded.NET Discussions Group](https://www.guilded.gg/guilded-api/groups/aDk5j9Jz/channels/8c247143-2009-415b-ab99-97912c0685bc/announcements)**
+- **[Programming Space](https://guilded.gg/programming)**
