@@ -4,14 +4,14 @@
     <!-- Package -->
     <PackageId>Guilded.Templates</PackageId>
     <PackageType>Template</PackageType>
-    <PackageVersion>0.6.0</PackageVersion>
+    <PackageVersion>0.7.0</PackageVersion>
     <PackageTags>guilded-dotnet;dotnet-new;template;templates;guilded</PackageTags>
     <PackageProjectUrl>https://guilded-net.github.io/index</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <!-- Template pack info -->
     <Title>Guilded.NET Templates</Title>
     <Authors>IdkGoodName</Authors>
-    <Description>.NET Core and .NET 6+ templates for Guilded.NET</Description>
+    <Description>.NET 6+ templates for Guilded.NET</Description>
     <TargetFramework>net6.0</TargetFramework>
     <RepositoryUrl>https://github.com/Guilded-NET/Guilded.NET</RepositoryUrl>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
