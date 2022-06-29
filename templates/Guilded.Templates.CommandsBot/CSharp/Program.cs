@@ -1,15 +1,16 @@
-﻿using System;
-using System.Reactive.Linq;
+﻿using System.Reactive.Linq;
 using Guilded;
+using Guilded.Commands;
 using Newtonsoft.Json.Linq;
+using ProjectName;
 
 // Get the configuration values
 JObject config = JObject.Parse(await File.ReadAllTextAsync("./config/config.json"));
 
 string auth = config.Value<string>("auth")!,
-       prefix = config.Value<string>("prefix")!;
+       globalPrefix = config.Value<string>("prefix")!;
 
-using var client = new GuildedBotClient(auth);
+using var client = new GuildedBotClient(auth).AddCommands(new BotCommands(), globalPrefix);
 
 client.Prepared
       .Subscribe(me =>
@@ -18,7 +19,7 @@ client.Prepared
 
 // Wait for !ping messages
 client.MessageCreated
-    .Where(msgCreated => msgCreated.Content == prefix + "ping")
+    .Where(msgCreated => msgCreated.Content == globalPrefix + "ping")
     .Subscribe(async msgCreated =>
         await msgCreated.ReplyAsync("Pong!")
     );

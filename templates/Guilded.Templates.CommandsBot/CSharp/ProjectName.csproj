@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Guilded" Version="0.8.6" />
+    <PackageReference Include="Guilded.Commands" Version="0.8.6" />
   </ItemGroup>
 
   <ItemGroup>

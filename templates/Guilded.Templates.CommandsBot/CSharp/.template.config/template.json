@@ -1,0 +1,14 @@
+{
+    "author": "IdkGoodName",
+    "classifications": ["guilded", "client", "commands"],
+    "identity": "Guilded.Templates.CommandBot.CSharp",
+    "groupIdentity": "Guilded.Templates.Bot",
+    "name": "Guilded.NET Command Bot",
+    "shortName": "guilded.command",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "ProjectName",
+    "preferNameDirectory": true
+}
