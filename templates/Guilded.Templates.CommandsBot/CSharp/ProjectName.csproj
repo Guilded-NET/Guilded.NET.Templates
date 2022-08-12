@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Guilded" Version="0.8.6" />
-    <PackageReference Include="Guilded.Commands" Version="0.8.6" />
+    <PackageReference Include="Guilded" Version="0.9.3" />
+    <PackageReference Include="Guilded.Commands" Version="0.9.3" />
   </ItemGroup>
 
   <ItemGroup>
