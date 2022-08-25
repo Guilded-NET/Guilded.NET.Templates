@@ -1,0 +1,14 @@
+{
+    "author": "IdkGoodName",
+    "classifications": ["guilded", "client"],
+    "identity": "Guilded.Templates.Webhook.CSharp",
+    "groupIdentity": "Guilded.Templates.Webhooks",
+    "name": "Guilded.NET Basic Webhook",
+    "shortName": "guilded.webhook",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "ProjectName",
+    "preferNameDirectory": true
+}
