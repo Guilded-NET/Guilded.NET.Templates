@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using Guilded.Commands;
 
 namespace ProjectName;

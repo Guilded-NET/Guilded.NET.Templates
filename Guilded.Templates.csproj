@@ -4,7 +4,7 @@
     <!-- Package -->
     <PackageId>Guilded.Templates</PackageId>
     <PackageType>Template</PackageType>
-    <PackageVersion>0.9.3</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
     <PackageTags>guilded-dotnet;dotnet-new;template;templates;guilded</PackageTags>
     <PackageProjectUrl>https://guilded-net.github.io/index</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

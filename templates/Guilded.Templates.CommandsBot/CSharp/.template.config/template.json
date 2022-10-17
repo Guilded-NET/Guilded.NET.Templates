@@ -2,7 +2,7 @@
     "author": "IdkGoodName",
     "classifications": ["guilded", "client", "commands"],
     "identity": "Guilded.Templates.CommandBot.CSharp",
-    "groupIdentity": "Guilded.Templates.Bot",
+    "groupIdentity": "Guilded.Templates.CommandBot",
     "name": "Guilded.NET Command Bot",
     "shortName": "guilded.command",
     "tags": {

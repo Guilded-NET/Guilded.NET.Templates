@@ -10,7 +10,7 @@ JObject config = JObject.Parse(await File.ReadAllTextAsync("./config/config.json
 string auth = config.Value<string>("auth")!,
        globalPrefix = config.Value<string>("prefix")!;
 
-using var client = new GuildedBotClient(auth).AddCommands(new BotCommands(), globalPrefix);
+await using var client = new GuildedBotClient(auth).AddCommands(new BotCommands(), globalPrefix);
 
 client.Prepared
       .Subscribe(me =>
