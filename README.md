@@ -1,6 +1,6 @@
 # Guilded.NET Templates
 
-[![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge)](https://github.com/Guilded-NET/Guilded.NET.Templates)
+[![Version](https://img.shields.io/badge/Version-1.1.0-blue?style=for-the-badge)](https://github.com/Guilded-NET/Guilded.NET.Templates)
 
 .NET templates for creating [Guilded.NET](https://github.com/Guilded-NET/Guilded.NET) bots. Easily create bots with one command.
 
