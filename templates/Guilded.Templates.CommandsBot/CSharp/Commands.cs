@@ -19,9 +19,9 @@ public partial class BotCommands : CommandModule
     }
 
     [Description("This does stuff.")]
-    [Command(Aliases = new string[] { "ex", "e" } )]
+    [Command(Aliases = new string[] { "ex", "e" })]
     [Example("10"), Example("ex", "50")]
-    public async Task Example(CommandEvent invokation, [CommandParam("number to say")] int number)
+    public static async Task Example(CommandEvent invokation, [CommandParam("number to say")] int number)
     {
         await invokation.ReplyAsync($"Someone secretly said number `{number}`");
 
